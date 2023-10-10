@@ -1,6 +1,4 @@
 # mahannaeFinal
-+
-
 
 ## Project Contents
 
@@ -14,8 +12,11 @@ If you wanted to include a table of contents to sections, and then links to each
 ***
 
 ### Data Source
-
-[Link to data source](https://...)
+The data from this map comes from the Electric Vehicle dataset from Washingtion State Department of Licensing.
+County Basemap from the United States Census Bureau County 1:500,000 Shapefile at .
+[Link to Electrice Vehicle dataset source](https://catalog.data.gov/dataset/electric-vehicle-population-data)
+[Link to County Basemap data source](https://www.census.gov/geographies/mapping-files
+/time-series/geo/cartographic-boundary.html)
 
 * Initial Data projection: 
 * Final Map projection:
