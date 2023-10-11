@@ -19,7 +19,8 @@ County Basemap from the United States Census Bureau County 1:500,000 Shapefile a
 /time-series/geo/cartographic-boundary.html)
 
 * Initial Data projection: 
-* Final Map projection: (mapimages/Washinton EV Density600.png) 
+![Final Map Projection](mapimages/Washinton EV Density600.png) 
+*Final Map Projection*
 
 ### Project Background
 
