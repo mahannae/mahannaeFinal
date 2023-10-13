@@ -39,32 +39,40 @@ The county basemap comes from the United States Census Bureau's County 1:500,000
 Next both layers are filtered to the state of Washington. This will make the county map just show the State of Washington. For the EV dataset this will remove any vehicles that are still currently registered from Washington but are not currently located within the state. The original dataset has 150,482 vehicles. After filtering there are 150,141 vehicles mapped. 
 
 ![EV Data Filter](/Graphics/EV%20data%20filter.PNG)
+
 *EV Data Filter*
 
 ![County Filter](/Graphics/County%20Filter.PNG)
+
 *County Basemap Filter*
 
 After filtering you map should look similar to this. 
 
-![Intial Map Projection](/Graphics/intialprojection.PNG)   
+![Intial Map Projection](/Graphics/intialprojection.PNG)  
+
 *Filtered Map Projection*
 
  After filtering these layers they are then exported as a Geopackage. They are exported to a Geopackage to save all changes and make sure the CRS is correct (this is helpful for further functions ease of operation). 
 
  ![Geopackage](/Graphics/Geopackage%20export.PNG)
+
  *Geopackage Export*
  
  Then these geopackages are added back into the map. 
  Next the hexgrid will be created. *Note that in this CRS the unit is feet. Go to MMQIS/Create/Grid Layer. You will select a hexagon grid layer with the x value = 50,000. Click Run. This will create a hexgrid layer of a 50,000 foot short diagonal (x) across your map. 
 
  ![Hexgrid tool](/Graphics/Hexgrid%20tool.PNG)
+
 *Grid Layer settings(add applicable file name and path to save it)*
 
 ![HexGridLayer](/Graphics/Hexgridlayer.PNG)
+
 *HexGrid layered across map*
 
  Now that the hex grid is created it is time to join the EV data and this grid. You will go to Processing/ Toolbox/ Vector General/ Join Attributes by Location (summary). 
+
  ![JoinToolpath](/Graphics/Jointoolpath.PNG)
+
  *Where to find the join attributes by location (summary) tool*
 
  The settings for this tool should be as follows. 
@@ -78,6 +86,7 @@ After filtering you map should look similar to this.
  Next you need to edit the symbology of the joined layer. 
  
  ![Mapeditedsymbology](/Graphics/Mapeditedsymbology.PNG)
+
  *Symbology Settings*
 
 
