@@ -4,7 +4,6 @@
 
 - [Introduction](#introduction)
 - [Data Source](#data-source)
-- [Project Background](#project-background)
 - [Purpose](#purpose)
 - [Mapmaking Process](#mapmaking-process)
 - [Map Summary](#map-summary)
@@ -28,13 +27,16 @@ The county basemap comes from the United States Census Bureau's County 1:500,000
 [Link to County Basemap data source](https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html)
 
 ### Purpose
-<p> The purpose behind the creation of this map was to help visualize the density of EV's in the state of Washington. This visualization helps to see how the density is spread across the state through the hexgrid. </p>
+
+<p> The purpose behind the creation of this map was to help visualize the density of EV's in the state of Washington. This visualization to show the density across the state is through a hexgrid. </p>
 
 ### Mapmaking Process
+
 <p> The map making process begins with importing the two datasets into QGIS. For this map the CRS is NAD27 / Washington North- EPSG 32048. The county basemap is added as a vector layer. The EV Dataset is added as a deliminated text layer. 
 
 ![Base Layers](/Graphics/Rawdatalayers.PNG)
-*Base Layers Inserted*
+
+*Intial Projection*
 
 Next both layers are filtered to the state of Washington. This will make the county map just show the State of Washington. For the EV dataset this will remove any vehicles that are still currently registered from Washington but are not currently located within the state. The original dataset has 150,482 vehicles. After filtering there are 150,141 vehicles mapped. 
 
@@ -83,25 +85,23 @@ After filtering you map should look similar to this.
  
  ![Basejoinhexgrid](/Graphics/basejoinedhexgrid.PNG)
 
- Next you need to edit the symbology of the joined layer. 
+ Next you need to edit the symbology of the joined layer. You can change the color scheme ase neccessary along with the background. Using the Natural Breaks helps to better visualize the data accurately. Turn the opcaity down to around 70 to still be able to see your county boundaries. 
  
  ![Mapeditedsymbology](/Graphics/Mapeditedsymbology.PNG)
 
  *Symbology Settings*
 
+Once all edits are finalized you should see a projection similar to the one below. 
 
  ![Final Map Projection](/Graphics/finalprojection.PNG)   
 *Final Map Projection*
 </p>
 
 ### Map summary
-<p>Overall this map visualizes the density of EV's in the State of Washington well through the Hexgrid. This state hosts approximately 150,000 EV's. This map shows several pockets of concentration of these EV's across the state.  </p>
-Across the README.md file, please answer the who, what, when, where, why, and how of the map making process
-
-
-
+<p>Overall this map visualizes the density of EV's in the State of Washington well through the Hexgrid. This state hosts approximately 150,000 EV's. This map shows several pockets of concentration of these EV's across the state. I believe that this map turned out very well for visualizing the density of EV's across the state. While creating this map I also made a density by county map and it was suprising how much that larger area really changes the focus of the viewer where the high numbers of EV's actually are. While there are areas in a county that have a high density there are areas with a very low density or no EV's at all. This is why I believe that a hexgrid makes this visualization better for correct interpretation.  </p>
 
 <p></p>
-## Final Project Link
+
+### Final Project Link
 
 Please view the [final map online](https://mahannae.github.io/mahannaeFinal/) 

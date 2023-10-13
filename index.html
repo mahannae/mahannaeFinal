@@ -11,8 +11,8 @@
 
   <style>
     body {
-      margin: 0;
-      padding: 0;
+      margin: 1;
+      padding: 1;
       background: #005374;
       font-family: 'Open Sans', sans-serif;
       font-weight: 400;
@@ -120,7 +120,7 @@
 
 <body>
   <!-- Add map to top of page and make it stretch to fill browser window. -->
-  <img class="max-image-width" src="path/to/image.png">
+  <img class="max-image-width" src="Map Images/Washinton EV Density1200.png">
 
   <!-- Create a two column layout for map information. -->
   <section>
@@ -133,31 +133,49 @@
       
       <!-- First column, the left half -->
       <div class="first-column">
-        <p>This mapping project found its start through the curoisty of going through the United States Data.gov website. This website has over a quarter million data sets to filter through. From registered electric vehicles (EV), average fruit and vegetable prices, and even bird strikes on aircraft this catalog of data is very diverese and deep. While trying to decide what to map for this project I ran across the State of Washington's registered EV dataset that was compiled by their State Department of Licensing. This caught my eye because Washington is a state that is commonly associated with environmentalism and being "green". I thought it would interesting to see the the distribution of EV's for the state. This dataset set showed that there are over 150,000 registered EV's for the state which was surprising but allowed for just that many more data points to pull from. While I could have overlayed this over a county map for the state and visualized the density by county I decided to use a hexgrid to better visualize this data. This breaks down the counties into much smaller areas to better visualize their distribution across the state.</p>
-        <p>Some other info including the <a href="path/to/geojson">link to the GeoJSON</a></p>
+        <h3> Overview</h3>
+        <p>This mapping project found its start through the curoisty of going through the United States Data.gov website. 
+          This website has over a quarter million data sets to filter through. 
+          From registered electric vehicles (EV), average fruit and vegetable prices, and even bird strikes on aircraft this catalog of data is very diverese and deep. 
+          While trying to decide what to map for this project I ran across the State of Washington's registered EV dataset that was compiled by their State Department of Licensing. 
+          This caught my eye because Washington is a state that is commonly associated with environmentalism and being "green". I thought it would interesting to see the the distribution of EV's for the state. 
+          This dataset set showed that there are over 150,000 registered EV's for the state which was surprising but allowed for just that many more data points to pull from. 
+          While I could have overlayed this over a county map for the state and visualized the density by county I decided to use a hexgrid to better visualize this data. 
+          This breaks down the counties into much smaller areas to better visualize their distribution across the state.</p>
+        
+        
       </div>
       
       <!-- Second column, the right half -->
       <div class="column">
-        <!-- Challenge map -->
-        <img class="max-image-width" src="Map Images/Washinton EV Density1200.png">
+       
+        <img class="max-image-width" src="">
         <p class="linkbox"></p>
         <a href='Map Images/Washinton EV Density8000.png' class="linkbox">High Resolution Image*</a>
-        <!-- Challenge photograph -->
-       
+        
+        <h3>Map details/Process</h3>
+    <p> This map displays a hexgrid overlayed on a State of Washington County Map. 
+      The hexgrid is symbolized to represnt the respective count of EV's that are in that hexagon. 
+      This shows the desnity of EV's per hexagon. The map started with importing the datasets as layers into QGIS. The map CRS is NAD27 / Washington North- EPSG 32048.
+      This CRS focuses on the state and it's unit measurement is in feet. 
+      Next the layers are filtered to the state of Washington. They are exported as Geopackages for ease of use in further functions.
+      Next a grid is created under MMQGIS tool. The grid is hexagons with a 50,000 foot short diagonal (x). 
+      Next the Porcessing Toolbox is opened where under Vector General you will join attributes by location (summary) for the two layers. 
+      Through this tool is enables the hexgrid to be joined to the EV data. This then allows you to have a layer which can be symbolized to visualize the amount of EV's per hexgrid. 
+    </p>
 
-      </div>
+      <h4>Summary</h4>
+      <p>Overall this map visualizes the density of EV's in the State of Washington well through the Hexgrid. This state hosts approximately 150,000 EV's. This map shows several pockets of concentration of these EV's across the state. I believe that this map turned out very well for visualizing the density of EV's across the state. While creating this map I also made a density by county map and it was suprising how much that larger area really changes the focus of the viewer where the high numbers of EV's actually are. While there are areas in a county that have a high density there are areas with a very low density or no EV's at all. This is why I believe that a hexgrid makes this visualization better for correct interpretation. </p>
+
     </div>
-
-    <h3>Map details</h3>
-    <p>How was this map made?</p>
+    </div>
 
     <p>
       University of Kentucky New Maps Plus, Fall 2023.
     </p>
     <hr>
     <ul>
-      <li>Visit my Github account <a href='https://github.com'>@mahannae</a> </li>
+      <li>See the rest of the project on <a href='https://github.com/mahannae/mahannaeFinal'>Github</a> </li>
       <li><a href="https://newmapsplus.github.io">New Maps Plus</a></li>
     </ul>
   </section>
