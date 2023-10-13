@@ -104,4 +104,4 @@ Across the README.md file, please answer the who, what, when, where, why, and ho
 <p></p>
 ## Final Project Link
 
-Please view the [final map online](https://github.com/mahannae/mahannaeFinal) 
+Please view the [final map online](https://mahannae.github.io/mahannaeFinal/) 
