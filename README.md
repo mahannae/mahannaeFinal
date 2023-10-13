@@ -32,7 +32,7 @@ The county basemap comes from the United States Census Bureau's County 1:500,000
 
 ### Mapmaking Process
 
-<p> The map making process begins with importing the two datasets into QGIS. For this map the CRS is NAD27 / Washington North- EPSG 32048. The county basemap is added as a vector layer. The EV Dataset is added as a deliminated text layer. 
+<p> The map making process begins with importing the two datasets into QGIS. When this is done the CRS ends up to be NAD83- EPSG 4269. For this map the CRS needs to be NAD27 / Washington North- EPSG 32048. You will cahnge this when the layers are exported below as Geopackages. The county basemap is added as a vector layer. The EV Dataset is added as a deliminated text layer. 
 
 ![Base Layers](/Graphics/Rawdatalayers.PNG)
 
@@ -48,19 +48,20 @@ Next both layers are filtered to the state of Washington. This will make the cou
 
 *County Basemap Filter*
 
-After filtering you map should look similar to this. 
 
-![Intial Map Projection](/Graphics/intialprojection.PNG)  
-
-*Filtered Map Projection*
 
  After filtering these layers they are then exported as a Geopackage. They are exported to a Geopackage to save all changes and make sure the CRS is correct (this is helpful for further functions ease of operation). 
 
  ![Geopackage](/Graphics/Geopackage%20export.PNG)
 
  *Geopackage Export*
+
+ After filtering, exporting as a geopackage, and adding the Geopackages back to the map and chaning the project CRS you map should look similar to this. 
+
+![Intial Map Projection](/Graphics/intialprojection.PNG)  
+
+*Filtered Map Projection EPSG 32048*
  
- Then these geopackages are added back into the map. 
  Next the hexgrid will be created. *Note that in this CRS the unit is feet. Go to MMQIS/Create/Grid Layer. You will select a hexagon grid layer with the x value = 50,000. Click Run. This will create a hexgrid layer of a 50,000 foot short diagonal (x) across your map. 
 
  ![Hexgrid tool](/Graphics/Hexgrid%20tool.PNG)
@@ -98,7 +99,7 @@ Once all edits are finalized you should see a projection similar to the one belo
 </p>
 
 ### Map summary
-<p>Overall this map visualizes the density of EV's in the State of Washington well through the Hexgrid. This state hosts approximately 150,000 EV's. This map shows several pockets of concentration of these EV's across the state. I believe that this map turned out very well for visualizing the density of EV's across the state. While creating this map I also made a density by county map and it was suprising how much that larger area really changes the focus of the viewer where the high numbers of EV's actually are. While there are areas in a county that have a high density there are areas with a very low density or no EV's at all. This is why I believe that a hexgrid makes this visualization better for correct interpretation.  </p>
+<p>Overall this map visualizes the density of EV's in the State of Washington well through the Hexgrid. This state hosts approximately 150,000 EV's. This map shows several pockets of concentration of these EV's across the state. I believe that this map turned out very well for visualizing the density of EV's across the state. While creating this map I also made a density by county map and it was suprising how much that larger area really changes the focus of the viewer where the high numbers of EV's actually are. While there are areas in a county that have a high density, there are areas with a very low density or no EV's at all. This is why I believe that a hexgrid makes this visualization better for correct interpretation. Overall I enjoyed making this map and learning how to tie multiple skills from this course into one project. </p>
 
 <p></p>
 
