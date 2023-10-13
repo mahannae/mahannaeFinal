@@ -3,7 +3,7 @@
 
 <head>
   <meta charset=utf-8 />
-  <title>Title of page</title>
+  <title>State of Washington Electric Vehicle Density</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
@@ -13,10 +13,10 @@
     body {
       margin: 0;
       padding: 0;
-      background: #d3d3d3;
+      background: #005374;
       font-family: 'Open Sans', sans-serif;
       font-weight: 400;
-      color: #3d3d3d;
+      color: #ffffff;
     }
 
     section {
@@ -27,7 +27,7 @@
     h1 {
       font-family: 'Open Sans', sans-serif;
       font-weight: 300;
-      font-size: 2.5em;
+      font-size: 3em;
       /* The em unit. 2.5x the current size */
       letter-spacing: .04em;
       text-transform: uppercase;
@@ -36,7 +36,7 @@
     h2 {
       font-family: 'Open Sans', sans-serif;
       font-weight: 700;
-      color: gray;
+      color: rgb(255, 255, 255);
       font-size: 1.25em;
       letter-spacing: .04em;
     }
@@ -47,7 +47,7 @@
     }
 
     a {
-      color: #005daa;
+      color: #f3f5f7;
       text-decoration: none;
     }
 
@@ -64,7 +64,7 @@
     }
 
     #map {
-      width: 100%;
+      width: 150%;
       margin: 0px auto;
 
     }
@@ -90,13 +90,13 @@
 
     .first-column {
       float: left;
-      width: 48%;
+      width: 40%;
       padding-right: 20px;
     }
 
     .column {
       float: left;
-      width: 48%;
+      width: 58%;
     }
 
     /* Clear floats after the columns */
@@ -124,28 +124,27 @@
 
   <!-- Create a two column layout for map information. -->
   <section>
-    <a href='path/to/image' class="linkbox">Full screen version</a>
+    
 
-    <h1>Title</h1>
-    <h2>Authored by: You</h2>
+    <h1>State of Washington Electric Vehicle Density</h1>
+    <h2>Authored by: Evan Mahanna</h2>
 
     <div class="row">
       
       <!-- First column, the left half -->
       <div class="first-column">
-        <p>Info in first column</p>
+        <p>This mapping project found its start through the curoisty of going through the United States Data.gov website. This website has over a quarter million data sets to filter through. From registered electric vehicles (EV), average fruit and vegetable prices, and even bird strikes on aircraft this catalog of data is very diverese and deep. While trying to decide what to map for this project I ran across the State of Washington's registered EV dataset that was compiled by their State Department of Licensing. This caught my eye because Washington is a state that is commonly associated with environmentalism and being "green". I thought it would interesting to see the the distribution of EV's for the state. This dataset set showed that there are over 150,000 registered EV's for the state which was surprising but allowed for just that many more data points to pull from. While I could have overlayed this over a county map for the state and visualized the density by county I decided to use a hexgrid to better visualize this data. This breaks down the counties into much smaller areas to better visualize their distribution across the state.</p>
         <p>Some other info including the <a href="path/to/geojson">link to the GeoJSON</a></p>
       </div>
       
       <!-- Second column, the right half -->
       <div class="column">
         <!-- Challenge map -->
-        <img class="max-image-width" src="path/to/map.png">
-        <p class="linkbox">Caption</p>
-
+        <img class="max-image-width" src="/Map Images/Washinton EV Density1200.png">
+        <p class="linkbox"></p>
+        <a href='/Map Images/Washinton EV Density8000.png' class="linkbox">High Resolution Image*</a>
         <!-- Challenge photograph -->
-        <img class="max-image-width" src="path/to/image.jpg">
-        <p class="linkbox">Caption</p>
+       
 
       </div>
     </div>
@@ -158,7 +157,7 @@
     </p>
     <hr>
     <ul>
-      <li>Visit my Github account <a href='https://github.com'>@mygithubuser</a> </li>
+      <li>Visit my Github account <a href='https://github.com'>@mahannae</a> </li>
       <li><a href="https://newmapsplus.github.io">New Maps Plus</a></li>
     </ul>
   </section>
